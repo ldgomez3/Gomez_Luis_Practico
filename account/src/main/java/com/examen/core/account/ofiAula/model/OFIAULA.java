@@ -1,8 +1,9 @@
 package com.examen.core.account.ofiAula.model;
 
 import com.examen.core.account.ofiEdificio.model.OFIEDIFICIO;
-import com.examen.core.account.ofiEdificioBloque.OFIEDIFICIOBLOQUE;
-import com.examen.core.account.ofiTipoAula.OFITIPOAULA;
+import com.examen.core.account.ofiEdificioBloque.model.OFIEDIFICIOBLOQUE;
+import com.examen.core.account.ofiTipoAula.model.OFITIPOAULA;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -48,6 +49,13 @@ public class OFIAULA {
 
     @Column(name = "FECHA_ULT_ACTUALIZACION")
     private java.sql.Timestamp fechaUltActualizacion;
+
+    public OFIAULA() {
+    }
+
+    public OFIAULA(Long codAula) {
+        this.codAula = codAula;
+    }
 
     public Long getCodAula() {
         return codAula;
